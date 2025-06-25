@@ -1,0 +1,239 @@
+<!--
+  One‑page portfolio — trilingual (FR | EN | 中文)
+  Filled with Wael Najar’s real CV data
+  Author: Wael Najar – 2025‑06‑25
+-->
+<!DOCTYPE html>
+<html lang="fr"
+        prefix="dc: http://purl.org/dc/elements/1.1/
+              foaf: http://xmlns.com/foaf/0.1/">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio – Wael Najar</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <style>
+    /* minimal override */
+    .lang-switch{position:fixed;top:12px;right:18px;font-weight:600;z-index:999;user-select:none}
+    .lang-choice{cursor:pointer;padding:0 4px;opacity:.6;transition:.2s}
+    .lang-choice.active{opacity:1;text-decoration:underline}
+    .video-wrapper{max-width:800px;margin:3rem auto;aspect-ratio:16/9;background:#000;border:4px solid #00e676}
+    .video-wrapper video,.video-wrapper iframe{width:100%;height:100%;display:block}
+    /* skills */
+    .skills-grid{max-width:800px;margin:0 auto}
+    .skill{margin:1rem 0}
+    .skill-label{display:flex;justify-content:space-between;font-size:.9rem;font-weight:600;color:#fff}
+    .skill-bar{height:8px;background:#263238;border-radius:4px;overflow:hidden;margin-top:4px}
+    .skill-bar-inner{height:100%;background:#00e676;width:0}
+    /* timeline */
+    .timeline{border-left:4px solid #00e676;margin:2rem auto;max-width:900px;padding-left:2rem}
+    .timeline-item{position:relative;margin-bottom:2rem}
+    .timeline-item::before{content:"";position:absolute;left:-10px;top:4px;width:16px;height:16px;border-radius:50%;background:#00e676}
+    .timeline-item h4{margin:0;color:#fff}
+    .timeline-item p{margin:.3rem 0 0;color:#cfd8dc;font-size:.9rem;line-height:1.4}
+    /* contact */
+    .contact-box{background:#1c2634;color:#fff;padding:2rem;margin:0 auto;max-width:900px}
+    .contact-box a{color:#00e676;text-decoration:none}
+  </style>
+</head>
+<body typeof="foaf:Document">
+  <!-- ========= Language switch ========= -->
+  <div class="lang-switch" aria-label="Language picker">
+  <span class="lang-choice" data-lang="fr">
+    <img src="static/flags/fr.png" alt="Français">
+  </span>
+  <span class="lang-choice" data-lang="en">
+    <img src="static/flags/gb.png" alt="English">
+  </span>
+  <span class="lang-choice" data-lang="zh">
+    <img src="static/flags/ch.png" alt="中文">
+  </span>
+</div>
+
+  <!-- ========= Navigation ========= -->
+  <nav>
+    <ul>
+      <li><a href="#home" data-i18n="nav_home"></a></li>
+      <li><a href="#skills" data-i18n="nav_prof"></a></li>
+      <li><a href="#experience" data-i18n="nav_exp"></a></li>
+      <li><a href="#portfolio" data-i18n="nav_portfolio"></a></li>
+      <li><a href="#contact" data-i18n="nav_contact"></a></li>
+    </ul>
+  </nav>
+
+  <!-- ========= Hero ========= -->
+  <section id="home" class="hero" style="text-align:center;padding:6rem 1rem">
+    <!-- nouvelle ligne -->
+    <img src="static/wael.jpg" alt="Photo : Wael Najar"
+       class="hero-photo" />
+
+    <h2><span data-i18n="hero_intro"></span>
+      <span class="highlight" data-i18n="hero_name"></span></h2>
+    <p class="role" data-i18n="hero_role" style="color:#cfd8dc;margin:.5rem 0 2rem"></p>
+    <a href="C:\Users\msi\OneDrive\Bureau\Wael-NAJAR-CV-alternance.pdf" class="btn" data-i18n="download_cv" download></a>
+  </section>
+
+  <!-- ========= Video ========= -->
+  <section id="video" typeof="foaf:Document">
+  <h2 data-i18n="video_title" class="section-title"></h2>
+
+  <!-- wrapper conservant le ratio 16:9 -->
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/exAfcktnzVA?rel=0"
+      title="Présentation vidéo – Wael Najar"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>  
+
+  <!-- ========= Skills ========= -->
+  <section id="skills" typeof="foaf:Document">
+    <h2 style="text-align:center" data-i18n="professional_title"></h2>
+    <h3 style="text-align:center" data-i18n="professional_subtitle"></h3>
+
+    <div class="skills-grid">
+      <div class="skill" data-level="80"><div class="skill-label"><span>HTML &amp; CSS</span><span>80%</span></div><div class="skill-bar"><div class="skill-bar-inner"></div></div></div>
+      <div class="skill" data-level="85"><div class="skill-label"><span>JavaScript</span><span>85%</span></div><div class="skill-bar"><div class="skill-bar-inner"></div></div></div>
+      <div class="skill" data-level="70"><div class="skill-label"><span>PHP</span><span>70%</span></div><div class="skill-bar"><div class="skill-bar-inner"></div></div></div>
+      <div class="skill" data-level="75"><div class="skill-label"><span>Python</span><span>75%</span></div><div class="skill-bar"><div class="skill-bar-inner"></div></div></div>
+      <div class="skill" data-level="80"><div class="skill-label"><span>Linux / Shell</span><span>80%</span></div><div class="skill-bar"><div class="skill-bar-inner"></div></div></div>
+      <div class="skill" data-level="70"><div class="skill-label"><span>SQL</span><span>70%</span></div><div class="skill-bar"><div class="skill-bar-inner"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ========= Portfolio ========= -->
+  <section id="portfolio" typeof="foaf:Document">
+    <h2 data-i18n="portfolio_title"></h2>
+    <p data-i18n="portfolio_subtitle"></p>
+
+    <div class="portfolio-grid">
+      <figure>
+        <img src="static/flags/puissance4.png" alt="Connect‑Four AI" />
+        <figcaption data-i18n="proj_connect4"></figcaption>
+      </figure>
+      <figure>
+        <img src="static/flags/matrix.png" alt="Matrix inversion" />
+        <figcaption data-i18n="proj_matrix"></figcaption>
+      </figure>
+      <figure>
+        <img src="static/flags/tcp.png" alt="TCP/IP messaging" />
+        <figcaption data-i18n="proj_msg"></figcaption>
+      </figure>
+      <figure>
+        <img src="static/flags/automate.png" alt="Cellular automata" />
+        <figcaption data-i18n="proj_cellular"></figcaption>
+      </figure>
+      <figure>
+        <img src="static/flags/web.png" alt="Responsive website" />
+        <figcaption data-i18n="proj_website"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ========= Experience ========= -->
+ <section id="experience" class="timeline" typeof="foaf:Document">
+  <h2 data-i18n="exp_title" class="section-title"></h2>
+
+  <div class="timeline-item" typeof="foaf:Document">
+    <h3>2024-2025 • ODACEL – Ingénieur data &amp; ETL (alternance)</h3>
+    <p>Migration MongoDB → PostgreSQL/MariaDB avec Apache Hop, automatisation ETL, contrôle qualité des données.</p>
+  </div>
+
+  <div class="timeline-item">
+    <h3>2024 • McDonald’s – Équipier polyvalent</h3>
+    <p>Service client, préparation des aliments, gestion de caisse et travail d’équipe.</p>
+  </div>
+</section>
+
+  <!-- ========= Contact ========= -->
+  <section id="contact">
+    <h2 style="text-align:center" data-i18n="contact_title"></h2>
+    <div class="contact-box">
+      <p>E‑mail : <a href="mailto:waelnajar408@gmail.com">waelnajar408@gmail.com</a></p>
+      <p>Tel : +33 7 44 86 64 57</p>
+      <p data-i18n="contact_city"></p>
+      <p><a href="https://www.linkedin.com/in/wael-najar-15a0182b4/">LinkedIn</a></p>
+    </div>
+  </section>
+
+  <!-- ========= I18N script ========= -->
+  <script>
+  /**
+   * mini i18n dictionnaire (toutes les chaînes) – FR / EN / 中文
+   */
+  const i18n = {
+    fr:{
+      nav_home:"ACCUEIL",nav_prof:"PROFESSIONNEL",nav_exp:"EXPÉRIENCES",nav_portfolio:"PORTFOLIO",nav_contact:"CONTACT",
+      hero_intro:"JE SUIS",hero_name:"WAEL&nbsp;NAJAR.",hero_role:"Ingénieur informatique &amp; Développeur Web",download_cv:"TÉLÉCHARGER LE CV",
+      video_title:"VIDÉO DE PRÉSENTATION",
+      professional_title:"01 PROFESSIONNEL",professional_subtitle:"MES CONNAISSANCES EN LOGICIELS",
+      portfolio_title:"02 PORTFOLIO",portfolio_subtitle:"MES DERNIÈRES CRÉATIONS. VOIR PLUS &gt;",
+      proj_connect4:"Puissance 4 IA (Min‑Max)",proj_matrix:"Inversion de matrices (D&C)",proj_msg:"Messagerie TCP/IP",proj_cellular:"Automates cellulaires",proj_website:"Site web responsive",
+      exp_title:"03 EXPÉRIENCES",
+      exp_role_odacel:"Ingénieur data &amp; ETL (alternance)",
+      exp_desc_odacel:"Migration MongoDB → PostgreSQL/MariaDB avec Apache Hop, automatisation ETL, contrôle qualité des données.",
+      exp_role_mcdo:"Équipier polyvalent",
+      exp_desc_mcdo:"Service client, préparation des aliments, gestion de caisse et travail d’équipe.",
+      contact_title:"CONTACT",
+      contact_city:"Basé à Paris, Île‑de‑France"
+    },
+    en:{
+      nav_home:"HOME",nav_prof:"PROFESSIONAL",nav_exp:"EXPERIENCE",nav_portfolio:"PORTFOLIO",nav_contact:"CONTACT",
+      hero_intro:"I AM",hero_name:"WAEL NAJAR.",hero_role:"Computer Engineer &amp; Web Developer",download_cv:"DOWNLOAD CV",
+      video_title:"INTRO VIDEO",
+      professional_title:"01 PROFESSIONAL",professional_subtitle:"SOFTWARE SKILLS",
+      portfolio_title:"02 PORTFOLIO",portfolio_subtitle:"LATEST WORKS. SEE MORE &gt;",
+      proj_connect4:"Connect‑Four AI (Min‑Max)",proj_matrix:"Matrix inversion (D&C)",proj_msg:"TCP/IP messaging",proj_cellular:"Cellular automata",proj_website:"Responsive website",
+
+      exp_title:"03 EXPERIENCE",
+      exp_role_odacel:"Data‑engineering apprentice",
+      exp_desc_odacel:"Migrated databases (MongoDB → PostgreSQL/MariaDB) with Apache Hop; automated ETL workflows and monitored data quality.",
+      exp_role_mcdo:"Crew member",
+      exp_desc_mcdo:"Customer service, food prep, cashier duties, teamwork.",
+      contact_title:"CONTACT",
+      contact_city:"Based in Paris, Île‑de‑France"
+    },
+    zh:{
+      nav_home:"主页",nav_prof:"专业",nav_exp:"经历",nav_portfolio:"作品集",nav_contact:"联系",
+      hero_intro:"我是",hero_name:"Wael Najar。",hero_role:"计算机工程师 &amp; 网络 开发者",download_cv:"下载简历",
+      video_title:"介绍视频",
+      professional_title:"01 专业",professional_subtitle:"软件技能",
+      portfolio_title:"02 作品集",portfolio_subtitle:"最新创作。查看更多 &gt;",
+      proj_connect4:"四连棋 AI (Min‑Max)",proj_matrix:"矩阵求逆 (分治)",proj_msg:"TCP/IP 消息系统",proj_cellular:"元胞自动机",proj_website:"响应式网站",
+
+      exp_title:"03 经历",
+      exp_role_odacel:"数据工程师实习生",
+      exp_desc_odacel:"使用 Apache Hop 将 MongoDB 数据迁移至 PostgreSQL 和 MariaDB；自动化 ETL 流程并监控数据质量。",
+      exp_role_mcdo:"餐厅员工",
+      exp_desc_mcdo:"客户服务、食品准备、收银及团队协作。",
+      contact_title:"联系",
+      contact_city:"常驻法国巴黎"
+    }
+  };
+
+  let currentLang = 'fr';
+  function setLang(lang){
+    currentLang = lang;
+    document.documentElement.setAttribute('lang', lang);
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(i18n[lang][key]) el.innerHTML = i18n[lang][key];
+    });
+    document.querySelectorAll('.lang-choice').forEach(btn=>btn.classList.toggle('active', btn.dataset.lang===lang));
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.lang-choice').forEach(btn=>btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+    setLang(currentLang);
+
+    // animate skill bars
+    document.querySelectorAll('.skill').forEach(s=>{
+      const pct = s.dataset.level + '%';
+      s.querySelector('.skill-bar-inner').style.width = pct;
+    });
+  });
+  </script>
+</body>
+</html>
